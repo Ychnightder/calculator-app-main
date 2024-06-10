@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+/* Theme 1 */
+/* Backgrounds */
+:root {
+    --theme1-main-background: hsl(222, 26%, 31%);
+    --theme1-toggle-keypad-background: hsl(223, 31%, 20%);
+    --theme1-screen-background: hsl(224, 36%, 15%);
+  
+    /* Keys */
+    --theme1-key-background: hsl(225, 21%, 49%);
+    --theme1-key-shadow: hsl(224, 28%, 35%);
+    --theme1-key-background-toggle: hsl(6, 63%, 50%);
+    --theme1-key-shadow-toggle: hsl(6, 70%, 34%);
+    --theme1-key-background-light: hsl(30, 25%, 89%);
+    --theme1-key-shadow-light: hsl(28, 16%, 65%);
+  
+    /* Text */
+    --theme1-text-dark-grayish-blue: hsl(221, 14%, 31%);
+    --theme1-text-white: hsl(0, 0%, 100%);
+  }
+  
+  /* Theme 2 */
+  /* Backgrounds */
+  :root {
+    --theme2-main-background: hsl(0, 0%, 90%);
+    --theme2-toggle-keypad-background: hsl(0, 5%, 81%);
+    --theme2-screen-background: hsl(0, 0%, 93%);
+  
+    /* Keys */
+    --theme2-key-background: hsl(185, 42%, 37%);
+    --theme2-key-shadow: hsl(185, 58%, 25%);
+    --theme2-key-background-toggle: hsl(25, 98%, 40%);
+    --theme2-key-shadow-toggle: hsl(25, 99%, 27%);
+    --theme2-key-background-light: hsl(45, 7%, 89%);
+    --theme2-key-shadow-light: hsl(35, 11%, 61%);
+  
+    /* Text */
+    --theme2-text-dark-grayish-yellow: hsl(60, 10%, 19%);
+    --theme2-text-white: hsl(0, 0%, 100%);
+  }
+  
+  /* Theme 3 */
+  /* Backgrounds */
+  :root {
+    --theme3-main-background: hsl(268, 75%, 9%);
+    --theme3-toggle-keypad-screen-background: hsl(268, 71%, 12%);
+  
+    /* Keys */
+    --theme3-key-background: hsl(281, 89%, 26%);
+    --theme3-key-shadow: hsl(285, 91%, 52%);
+    --theme3-key-background-toggle: hsl(176, 100%, 44%);
+    --theme3-key-shadow-toggle: hsl(177, 92%, 70%);
+    --theme3-key-background-dark: hsl(268, 47%, 21%);
+    --theme3-key-shadow-dark: hsl(290, 70%, 36%);
+  
+    /* Text */
+    --theme3-text-light-yellow: hsl(52, 100%, 62%);
+    --theme3-text-dark-blue: hsl(198, 20%, 13%);
+    --theme3-text-white: hsl(0, 0%, 100%);
+  }
+  
+
+*{
+    padding:0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body{
+    font-size: 32px;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    background: var(--theme1-main-background);
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    height: 100vh;
+    
+}
+
+.container{
+    width: 550px;
+    height: 650px;
+    
+}
+
+.head_calculator{
+    height: 15%;
+    width: 100%;
+    background: rebeccapurple;
+    display:  flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.head_calculator .calc{
+    font-size: 32px;
+    color: var(--theme1-text-white);
+    margin-left: 05px;
+}
+
+.form_calc{
+    background: #f5bdbd;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form_calc .label_theme{
+    font-size: 16px;
+    margin: 0 15px;
+    color: var(--theme1-text-white);
+}
+
+.form_calc .label_container{
+    width: 60px;
+    height: 21px;
+    background: var(--theme1-screen-background);
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.label_container .select{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--theme1-key-background-toggle);
+    position: absolute;
+    left: 4px;
+    transition: all 0.5s ease-in-out;
+}
+
+.label_container input[type="radio"] {
+    z-index: -1;
+    cursor: pointer;
+  }
+
+  #radio1:checked ~ .select {
+    left: 5px;
+    background: #b088f9;
+  }
+
+  #radio2:checked ~ .select {
+    left: 27px;
+    background: #b088f9;
+  }
+
+  #radio3:checked ~ .select {
+    left: 49px;
+    background: #b088f9;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.screen_calculator{
+    height: 25%;
+    width: 100%;
+    background: violet;
+}
+.body_calculator{
+    height: 60%;
+    width: 100%;
+    background: yellow;
+}
