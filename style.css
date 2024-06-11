@@ -65,6 +65,7 @@
     margin: 0px;
     list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 
@@ -83,7 +84,7 @@ body{
 }
 
 .container{
-    width: 550px;
+    width: 500px;
     height: 650px;
     
 }
@@ -91,7 +92,6 @@ body{
 .head_calculator{
     height: 15%;
     width: 100%;
-    background: rebeccapurple;
     display:  flex;
     align-items: center;
     justify-content: space-between;
@@ -125,9 +125,10 @@ body{
   justify-content: space-around;
 }
 .container_number_option .container_number p{
-  font-size: 14px;
+  font-size: 13px;
   color: var(--theme1-text-white);
   cursor: pointer;
+  margin-bottom: 5px;
 }
 
  .form_calc .container_option{
@@ -153,43 +154,98 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; 
-  background-color: var(--theme1-key-background-toggle);
+  background-color: var(--theme1-key-shadow-toggle);
   border-radius: 50%;
   height: 15px;
   width: 15px;
+  transition: background 0.3ms ease-out;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: var(--theme1-key-background-toggle);
+ 
+}
+/* screen */
 
 
 .screen_calculator{
-    height: 25%;
+    height: 20%;
     width: 100%;
-    background: violet;
+    display: flex;
+   justify-content: center;
 }
+.screen_calculator input{
+  width: 100%;
+  height: 90px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background:var(--theme1-screen-background);
+  color: var(--theme1-text-white);
+  font-size: 32px;
+  font-weight: 700;
+  padding: 10px;
+  direction: rtl;
+}
+/* body calc */
 .body_calculator{
     height: 60%;
     width: 100%;
-    background: yellow;
+    background: var(--theme1-toggle-keypad-background);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.body_calculator .top_btn{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+.top_btn .btn{
+  flex: 0 0 20%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'League Spartan';
+  cursor: pointer;
+  color: var(--theme1-main-background); 
+  background:  var(--theme1-key-background-light);
+  box-shadow: 0px 4.8px 1px var( --theme1-text-dark-grayish-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top_btn .del{
+  color:var(--theme1-text-white) ;
+  background: var(--theme1-key-background);
+  box-shadow: 0px 4.8px 1px var( --theme1-main-background);
+}
+.bottom_btn      {
+  width: 91%;
+  height: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom_btn .btt_btn{
+  flex: 0 0 44%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 0 30px;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: 'League Spartan';
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
