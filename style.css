@@ -121,15 +121,16 @@ body{
 }
 .container_number_option .container_number{
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
 }
 .container_number_option .container_number p{
   font-size: 14px;
   color: var(--theme1-text-white);
-  margin-bottom: 2px;
+  cursor: pointer;
 }
-/* .form_calc .container_option{
+
+ .form_calc .container_option{
   background: var(--theme1-toggle-keypad-background);
   display: flex;
   align-items: center;
@@ -139,31 +140,26 @@ body{
   border-radius: 40px;
   position: relative;
   cursor: pointer;
+} 
+
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 50px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  background-color: var(--theme1-key-background-toggle);
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
 }
 
 
-
-.form_calc .select{
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: var(--theme1-key-background-toggle);
-    position: absolute;
-    left: 4px;
-    transition: all 0.5s ease-in;
-}
-
-#radio1:checked ~ .select {
-  left: 4px;
-}
-
-#radio2:checked ~ .select {
-  left: 22px;
-}
-
-#radio3:checked ~ .select {
-  left: 42px;
-} */
 
 
 
