@@ -53,4 +53,57 @@ function writeBtncontinute(event) {
     screen_calculator_input.value = "";
  })
 
- 
+ const operations = {
+    add: (a, b) => a + b,
+    mul: (a, b) => a * b,
+    sub: (a, b) => a - b,
+    div: (a,b) => a / b,
+ }
+
+
+ function equals() {
+    let a = null;
+    let b = null;
+    
+    function buttonClick(event) {
+        const targetValue = parseInt(event.target.getAttribute('data-value'), 10);
+        if (a === null) {
+            a = targetValue;
+        } else if (b === null) {
+            b = targetValue;
+        }
+        // Mise à jour de l'affichage
+        screen_calculator_input.value = `a: ${a}, b: ${b}`;
+    }
+    
+    const btns = document.querySelectorAll('.btn');
+    btns.forEach(btn => {
+        btn.addEventListener('click', buttonClick);
+    });
+
+    // Déclaration de la variable pour stocker le résultat
+    let result = 0;
+
+    // Récupération de l'opérateur à partir de l'input
+    const operator = screen_calculator_input.value.split(" ")[1];
+
+    // Vérification de l'opérateur et exécution de l'opération correspondante
+    if (operator === "+") {
+        result = operations.add(a, b);
+    } else if (operator === "-") {
+        result = operations.sub(a, b);
+    } else if (operator === "x") {
+        result = operations.mul(a, b);
+    } else if (operator === "/") {
+        if (b !== 0) {
+            result = operations.div(a, b);
+        } else {
+            result = "Erreur: Division par zéro";
+        }
+    }
+
+    // Affichage du résultat dans l'input
+    screen_calculator_input.value = result;
+}
+
+ let equal = document.querySelector('.equal').addEventListener('click', equals)
