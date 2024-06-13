@@ -1,62 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 /* Theme 1 */
 /* Backgrounds */
-:root {
-    --theme1-main-background: hsl(222, 26%, 31%);
-    --theme1-toggle-keypad-background: hsl(223, 31%, 20%);
-    --theme1-screen-background: hsl(224, 36%, 15%);
+.theme-1 {
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
   
     /* Keys */
-    --theme1-key-background: hsl(225, 21%, 49%);
-    --theme1-key-shadow: hsl(224, 28%, 35%);
-    --theme1-key-background-toggle: hsl(6, 63%, 50%);
-    --theme1-key-shadow-toggle: hsl(6, 70%, 34%);
-    --theme1-key-background-light: hsl(30, 25%, 89%);
-    --theme1-key-shadow-light: hsl(28, 16%, 65%);
+    --key-background: hsl(225, 21%, 49%);
+    --key-shadow: hsl(224, 28%, 35%);
+    --key-background-toggle: hsl(6, 63%, 50%);
+    --key-shadow-toggle: hsl(6, 70%, 34%);
+    --key-background-light: hsl(30, 25%, 89%);
+    --key-shadow-light: hsl(28, 16%, 65%);
   
     /* Text */
-    --theme1-text-dark-grayish-blue: hsl(221, 14%, 31%);
-    --theme1-text-white: hsl(0, 0%, 100%);
+    --text-dark-grayish-blue: hsl(221, 14%, 31%);
+    --text-white: hsl(0, 0%, 100%);
   }
   
   /* Theme 2 */
   /* Backgrounds */
-  :root {
-    --theme2-main-background: hsl(0, 0%, 90%);
-    --theme2-toggle-keypad-background: hsl(0, 5%, 81%);
-    --theme2-screen-background: hsl(0, 0%, 93%);
+  .theme-2 {
+    --main-background: hsl(0, 0%, 90%);
+    --toggle-keypad-background: hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
   
     /* Keys */
-    --theme2-key-background: hsl(185, 42%, 37%);
-    --theme2-key-shadow: hsl(185, 58%, 25%);
-    --theme2-key-background-toggle: hsl(25, 98%, 40%);
-    --theme2-key-shadow-toggle: hsl(25, 99%, 27%);
-    --theme2-key-background-light: hsl(45, 7%, 89%);
-    --theme2-key-shadow-light: hsl(35, 11%, 61%);
+    --key-background: hsl(185, 42%, 37%);
+    --key-shadow: hsl(185, 58%, 25%);
+    --key-background-toggle: hsl(25, 98%, 40%);
+    --key-shadow-toggle: hsl(25, 99%, 27%);
+    --key-background-light: hsl(45, 7%, 89%);
+    --key-shadow-light: hsl(35, 11%, 61%);
   
     /* Text */
-    --theme2-text-dark-grayish-yellow: hsl(60, 10%, 19%);
-    --theme2-text-white: hsl(0, 0%, 100%);
+    --text-dark-grayish-yellow: hsl(60, 10%, 19%);
+    --text-white: hsl(0, 0%, 100%);
   }
   
   /* Theme 3 */
   /* Backgrounds */
-  :root {
-    --theme3-main-background: hsl(268, 75%, 9%);
-    --theme3-toggle-keypad-screen-background: hsl(268, 71%, 12%);
+  .theme-3 {
+    --main-background: hsl(268, 75%, 9%);
+    --toggle-keypad-screen-background: hsl(268, 71%, 12%);
   
     /* Keys */
-    --theme3-key-background: hsl(281, 89%, 26%);
-    --theme3-key-shadow: hsl(285, 91%, 52%);
-    --theme3-key-background-toggle: hsl(176, 100%, 44%);
-    --theme3-key-shadow-toggle: hsl(177, 92%, 70%);
-    --theme3-key-background-dark: hsl(268, 47%, 21%);
-    --theme3-key-shadow-dark: hsl(290, 70%, 36%);
+    --key-background: hsl(281, 89%, 26%);
+    --key-shadow: hsl(285, 91%, 52%);
+    --key-background-toggle: hsl(176, 100%, 44%);
+    --key-shadow-toggle: hsl(177, 92%, 70%);
+    --key-background-dark: hsl(268, 47%, 21%);
+    --key-shadow-dark: hsl(290, 70%, 36%);
   
     /* Text */
-    --theme3-text-light-yellow: hsl(52, 100%, 62%);
-    --theme3-text-dark-blue: hsl(198, 20%, 13%);
-    --theme3-text-white: hsl(0, 0%, 100%);
+    --text-light-yellow: hsl(52, 100%, 62%);
+    --text-dark-blue: hsl(198, 20%, 13%);
+    --text-white: hsl(0, 0%, 100%);
   }
   
 
@@ -75,7 +75,7 @@ body{
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    background: var(--theme1-main-background);
+    background: var(--main-background);
     display: flex;
     align-items: center;
     justify-content: center ;
@@ -98,7 +98,7 @@ body{
 }
 .head_calculator .calc{
     font-size: 32px;
-    color: var(--theme1-text-white);
+    color: var(--text-white);
     margin-left: 05px;
 }
 
@@ -111,7 +111,7 @@ body{
 .form_calc .label_theme{
     font-size: 15px;
     margin: 0 15px;
-    color: var(--theme1-text-white);
+    color: var(--text-white);
 }
 .form_calc .container_number_option{
   display: flex;
@@ -126,13 +126,13 @@ body{
 }
 .container_number_option .container_number p{
   font-size: 13px;
-  color: var(--theme1-text-white);
+  color: var(--text-white);
   cursor: pointer;
   margin-bottom: 5px;
 }
 
  .form_calc .container_option{
-  background: var(--theme1-toggle-keypad-background);
+  background: var(--toggle-keypad-background);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -154,14 +154,14 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; 
-  background-color: var(--theme1-key-shadow-toggle);
+  background-color: var(--key-shadow-toggle);
   border-radius: 50%;
   height: 15px;
   width: 15px;
   transition: background 0.3s ease-in-out;
 }
 input[type="range"]::-webkit-slider-thumb:hover {
-  background-color: var(--theme1-key-background-toggle);
+  background-color: var(--key-background-toggle);
  
 }
 /* screen */
@@ -179,8 +179,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
   border-radius: 10px;
   outline: none;
   border: none;
-  background:var(--theme1-screen-background);
-  color: var(--theme1-text-white);
+  background:var(--screen-background);
+  color: var(--text-white);
   font-size: 32px;
   font-weight: 700;
   padding: 10px;
@@ -190,7 +190,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
 .body_calculator{
     height: 60%;
     width: 100%;
-    background: var(--theme1-toggle-keypad-background);
+    background: var(--toggle-keypad-background);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -216,9 +216,9 @@ input[type="range"]::-webkit-slider-thumb:hover {
   font-weight: 700;
   font-family: 'League Spartan';
   cursor: pointer;
-  color: var(--theme1-main-background); 
-  background:  var(--theme1-key-background-light);
-  box-shadow: 0px 4.8px 1px var( --theme1-text-dark-grayish-blue);
+  color: var(--main-background); 
+  background:  var(--key-background-light);
+  box-shadow: 0px 4.8px 1px var( --text-dark-grayish-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -226,17 +226,17 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 }
 .top_btn .btn:hover{
-  background: var(--theme2-text-white);
+  background: var(--text-white);
 }
 .top_btn .del{
-  color:var(--theme1-text-white) ;
-  background: var( --theme1-key-background);
-  box-shadow: 0px 4.8px 1px var( --theme1-key-shadow);
+  color:var(--text-white) ;
+  background: var( --key-background);
+  box-shadow: 0px 4.8px 1px var( --key-shadow);
   transition: all 0.3s ease-in-out ;
 
 }
 .top_btn .del:hover{
-  background: var(--theme1-key-background); /*probleme couleur*/
+  background: var(--key-background); /*probleme couleur*/
 }
 .bottom_btn      {
   width: 91%;
@@ -260,21 +260,21 @@ input[type="range"]::-webkit-slider-thumb:hover {
   justify-content: center;
 }
 .bottom_btn .reset{
-  color:var(--theme1-text-white) ;
-  background: var(--theme1-key-background);
-  box-shadow: 0px 4.8px 1px var( --theme1-main-background);
+  color:var(--text-white) ;
+  background: var(--key-background);
+  box-shadow: 0px 4.8px 1px var( --main-background);
 }
 .bottom_btn .reset:hover{ 
-  background: var(--theme1-key-background); /*probleme couleur*/
+  background: var(--key-background); /*probleme couleur*/
 }
 .bottom_btn .equal{
-  color:var(--theme1-text-white) ;
-  background: var( --theme1-key-shadow-toggle);
-  box-shadow: 0px 4.8px 1px var( --theme1-key-background-toggle);
+  color:var(--text-white) ;
+  background: var( --key-shadow-toggle);
+  box-shadow: 0px 4.8px 1px var( --key-background-toggle);
   transition: all 0.3s ease-in-out ;
 
 }
 .bottom_btn .equal:hover{
-  background: var( --theme1-key-background-toggle);
-  box-shadow: 0px 4.8px 1px var(--theme1-key-shadow-toggle );
+  background: var( --key-background-toggle);
+  box-shadow: 0px 4.8px 1px var(--key-shadow-toggle );
 }

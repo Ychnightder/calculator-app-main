@@ -2,21 +2,39 @@
         let input_range = document.querySelector("#option");
         let screen_calculator_input = document.querySelector("#screen_calculator_input");
         let btn_body = document.querySelectorAll('.btn');
-
+        document.body.classList.add("theme-1");
         // Function to handle paragraph clicks
         function clickOption(event) {
+            document.body.classList.remove("theme-1", "theme-2", "theme-3");
             if (event.target.textContent === "1") {
                 input_range.value = 0;
+                document.body.classList.add("theme-1");
             } else if (event.target.textContent === "2") {
                 input_range.value = 1;
+                document.body.classList.add("theme-2");
             } else {
                 input_range.value = 2;
+                document.body.classList.add("theme-3");
             }
         }
-
         paragraph_option.forEach(p => {
             p.addEventListener('click', clickOption);
         });
+
+        function rangeChange(event){
+            let value = event.target.value;
+            document.body.classList.remove("theme-1", "theme-2", "theme-3");
+            if (value === "0") {
+                document.body.classList.add("theme-1");
+            }
+            else if (value === "1") {
+                document.body.classList.add("theme-2");
+            } else {
+                document.body.classList.add("theme-3");
+            }
+        }
+        input_range.addEventListener('input',rangeChange)
+   
 
         // Function to handle button clicks for writing to screen
         function writeBtn(event) {
