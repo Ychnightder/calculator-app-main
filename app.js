@@ -6,12 +6,13 @@
         // Function to handle paragraph clicks
         function clickOption(event) {
             document.body.classList.remove("theme-1", "theme-2", "theme-3");
-            if (event.target.textContent === "1") {
+            if (event.target.textContent.trim() === "1") {
                 input_range.value = 0;
                 document.body.classList.add("theme-1");
-            } else if (event.target.textContent === "2") {
+            } else if (event.target.textContent.trim() === "2") {
                 input_range.value = 1;
                 document.body.classList.add("theme-2");
+              
             } else {
                 input_range.value = 2;
                 document.body.classList.add("theme-3");

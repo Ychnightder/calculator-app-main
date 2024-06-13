@@ -223,7 +223,6 @@ input[type="range"]::-webkit-slider-thumb:hover {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-in-out ;
-
 }
 .top_btn .btn:hover{
   background: var(--text-white);
@@ -277,4 +276,55 @@ input[type="range"]::-webkit-slider-thumb:hover {
 .bottom_btn .equal:hover{
   background: var( --key-background-toggle);
   box-shadow: 0px 4.8px 1px var(--key-shadow-toggle );
+}
+
+
+@media (max-width: 550px) {
+  
+  .container{
+    width: 335px;
+    height: 650px;
+  }
+  .body_calculator{
+    height: 60%;
+    width: 100%;
+    
+  }
+  .body_calculator .top_btn {
+    margin: 0;
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  .top_btn .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 15%;
+    font-size: 30px;
+
+  }
+
+  .bottom_btn{
+    display: block;
+    width: 76%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .bottom_btn .reset{
+    width: 80px;
+    height: 60px;
+  }
+ 
+  .bottom_btn .equal{
+    width: 80px;
+    height: 60px;
+  }
+
+  
 }
