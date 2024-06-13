@@ -5,9 +5,9 @@
 
         // Function to handle paragraph clicks
         function clickOption(event) {
-            if (event.target.textContent.trim() === "1") {
+            if (event.target.textContent === "1") {
                 input_range.value = 0;
-            } else if (event.target.textContent.trim() === "2") {
+            } else if (event.target.textContent === "2") {
                 input_range.value = 1;
             } else {
                 input_range.value = 2;
